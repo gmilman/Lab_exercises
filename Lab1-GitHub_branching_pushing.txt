@@ -1,0 +1,301 @@
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~
+$ cd Documents
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents
+$ git clone https://github.com/gmilman/IronGemma
+Cloning into 'IronGemma'...
+warning: You appear to have cloned an empty repository.
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents
+$ ls
+'CV 2022'/                    IronHack/              desktop.ini
+'Carnet professionel'/       'My Music'@            'jingle bells.odt'
+ Finances/                   'My Pictures'@         'jingle bells.pdf'
+'GemmaMilmanResume (1).pdf'  'My Videos'@           'lettre benoit.odt'
+ Grimpo6/                     Personal/              mysql-pwd.txt
+'Important Docs'/            'Python Scripts'/       subfile/
+ IronGemma/                  'Visual Studio 2019'/   untitled_0.odt
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents
+$ touch about.txt
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents
+$ ls
+'CV 2022'/                   'My Music'@            'jingle bells.odt'
+'Carnet professionel'/       'My Pictures'@         'jingle bells.pdf'
+ Finances/                   'My Videos'@           'lettre benoit.odt'
+'GemmaMilmanResume (1).pdf'   Personal/              mysql-pwd.txt
+ Grimpo6/                    'Python Scripts'/       subfile/
+'Important Docs'/            'Visual Studio 2019'/   untitled_0.odt
+ IronGemma/                   about.txt
+ IronHack/                    desktop.ini
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents
+$ mv about.txt IronGemma
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents
+$ cd IronGemma
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma (main)
+$ ls
+about.txt
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma (main)
+$ git add about.txt
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma (main)
+$ git commit -m "About me V 0"
+[main (root-commit) 15aa386] About me V 0
+ 1 file changed, 1 insertion(+)
+ create mode 100644 about.txt
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma (main)
+$ git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 245 bytes | 245.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/gmilman/IronGemma
+ * [new branch]      main -> main
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma (main)
+$ git log
+commit 15aa3869c9ab54d0068deb4c3a1ed260e09dd3f0 (HEAD -> main, origin/main)
+Author: gmilman <gemmamilman@gmail.com>
+Date:   Mon Jan 16 15:30:30 2023 +0100
+
+    About me V 0
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma (main)
+$ git clone https://github.com/gmilman/IronKaci
+Cloning into 'IronKaci'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma (main)
+$ touch gemma.txt
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma (main)
+$ git add gemma.txt
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma (main)
+$ git commit -m "Gemma's aim"
+[main 8a28341] Gemma's aim
+ 1 file changed, 1 insertion(+)
+ create mode 100644 gemma.txt
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma (main)
+$ ls
+IronKaci/  about.txt  gemma.txt
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma (main)
+$ mv gemma.txt IronKaci
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma (main)
+$ git branch m- main classmate
+usage: git branch [<options>] [-r | -a] [--merged] [--no-merged]
+   or: git branch [<options>] [-f] [--recurse-submodules] <branch-name> [<start-point>]
+   or: git branch [<options>] [-l] [<pattern>...]
+   or: git branch [<options>] [-r] (-d | -D) <branch-name>...
+   or: git branch [<options>] (-m | -M) [<old-branch>] <new-branch>
+   or: git branch [<options>] (-c | -C) [<old-branch>] <new-branch>
+   or: git branch [<options>] [-r | -a] [--points-at]
+   or: git branch [<options>] [-r | -a] [--format]
+
+Generic options
+    -v, --verbose         show hash and subject, give twice for upstream branch
+    -q, --quiet           suppress informational messages
+    -t, --track[=(direct|inherit)]
+                          set branch tracking configuration
+    -u, --set-upstream-to <upstream>
+                          change the upstream info
+    --unset-upstream      unset the upstream info
+    --color[=<when>]      use colored output
+    -r, --remotes         act on remote-tracking branches
+    --contains <commit>   print only branches that contain the commit
+    --no-contains <commit>
+                          print only branches that don't contain the commit
+    --abbrev[=<n>]        use <n> digits to display object names
+
+Specific git-branch actions:
+    -a, --all             list both remote-tracking and local branches
+    -d, --delete          delete fully merged branch
+    -D                    delete branch (even if not merged)
+    -m, --move            move/rename a branch and its reflog
+    -M                    move/rename a branch, even if target exists
+    -c, --copy            copy a branch and its reflog
+    -C                    copy a branch, even if target exists
+    -l, --list            list branch names
+    --show-current        show current branch name
+    --create-reflog       create the branch's reflog
+    --edit-description    edit the description for the branch
+    -f, --force           force creation, move/rename, deletion
+    --merged <commit>     print only branches that are merged
+    --no-merged <commit>  print only branches that are not merged
+    --column[=<style>]    list branches in columns
+    --sort <key>          field name to sort on
+    --points-at <object>  print only branches of the object
+    -i, --ignore-case     sorting and filtering are case insensitive
+    --recurse-submodules  recurse through submodules
+    --format <format>     format to use for the output
+
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma (main)
+$ git fetch origin
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma (main)
+$ git branch -u origin/classmat classmate
+fatal: branch 'classmate' does not exist
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma (main)
+$ git branch -u origin/classmate classmate
+fatal: branch 'classmate' does not exist
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma (main)
+$ git branch -u origin/classmate
+fatal: the requested upstream branch 'origin/classmate' does not exist
+hint:
+hint: If you are planning on basing your work on an upstream
+hint: branch that already exists at the remote, you may need to
+hint: run "git fetch" to retrieve it.
+hint:
+hint: If you are planning to push out a new local branch that
+hint: will track its remote counterpart, you may want to use
+hint: "git push -u" to set the upstream config as you push.
+hint: Disable this message with "git config advice.setUpstreamFailure false"
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma (main)
+$ git remote set-head origin -a
+origin/HEAD set to main
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma (main)
+$ git branch -vv
+* main 8a28341 [origin/main: ahead 1] Gemma's aim
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma (main)
+$ git init .
+Reinitialized existing Git repository in C:/Users/gemma/Documents/IronGemma/.git/
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma (main)
+$ cd IronKaci
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma/IronKaci (master)
+$ git init .
+Reinitialized existing Git repository in C:/Users/gemma/Documents/IronGemma/IronKaci/.git/
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma/IronKaci (master)
+$ git checkout -b classmate
+Switched to a new branch 'classmate'
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma/IronKaci (classmate)
+$ ls
+about.txt  gemma.txt
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma/IronKaci (classmate)
+$ git add gemma.txt
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma/IronKaci (classmate)
+$ git commit -m "Gemma's aim"
+[classmate 05930ef] Gemma's aim
+ 1 file changed, 1 insertion(+)
+ create mode 100644 gemma.txt
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma/IronKaci (classmate)
+$ git push origin classmate
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 384 bytes | 384.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'classmate' on GitHub by visiting:
+remote:      https://github.com/gmilman/IronKaci/pull/new/classmate
+remote:
+To https://github.com/gmilman/IronKaci
+ * [new branch]      classmate -> classmate
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma/IronKaci (classmate)
+$ git log
+commit 05930efacd428fca37412b6895368c27a7bdf99f (HEAD -> classmate, origin/classmate)
+Author: gmilman <gemmamilman@gmail.com>
+Date:   Mon Jan 16 16:00:39 2023 +0100
+
+    Gemma's aim
+
+commit 4d8041abc7d7c624705983651e5b344d98fb40af (origin/master, origin/HEAD, master)
+Author: Kaci213 <b.kaci75@gmail.com>
+Date:   Mon Jan 16 15:27:40 2023 +0100
+
+    New file
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma/IronKaci (classmate)
+$ git checkout -b test
+Switched to a new branch 'test'
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma/IronKaci (test)
+$ git add about.txt
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma/IronKaci (test)
+$ git commit -m "testing the tes"
+On branch test
+nothing to commit, working tree clean
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma/IronKaci (test)
+$ git push
+fatal: The current branch test has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin test
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma/IronKaci (test)
+$ touch random.txt
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma/IronKaci (test)
+$ add random.txt
+bash: add: command not found
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma/IronKaci (test)
+$ git add random.txt
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma/IronKaci (test)
+$ git commit -m "testing branch changes"
+[test c0418ec] testing branch changes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 random.txt
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma/IronKaci (test)
+$ git push origina main
+error: src refspec main does not match any
+error: failed to push some refs to 'origina'
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma/IronKaci (test)
+$ git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/gmilman/IronKaci'
+
+gemma@DESKTOP-HHBDF1H MINGW64 ~/Documents/IronGemma/IronKaci (test)
+$ git push origin test
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 596 bytes | 298.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/gmilman/IronKaci
+   4d8041a..c0418ec  test -> test
