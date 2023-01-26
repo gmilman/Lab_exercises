@@ -53,4 +53,7 @@ from agg_profits
 group by 	au_id
 order by profits desc;
 
-select * from most_profiting_authors;
+select m.au_id, au_fname, au_lname, profits 
+from most_profiting_authors m
+join authors a
+on m.au_id=a.au_id;
