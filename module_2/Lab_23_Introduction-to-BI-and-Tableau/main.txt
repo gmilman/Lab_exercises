@@ -1,0 +1,4 @@
+Dashboard
+https://public.tableau.com/app/profile/gemma.milman/viz/IronHack_Lab_24_Dash_Gemma/Dashboard1?publish=yes
+
+For info, i combined avg, totals and item types into a single chart for warehouse sales and retail transfers
