@@ -125,5 +125,39 @@ SHOW VARIABLES LIKE 'performance_schema';
 #Create a fourth column in the query, indicating whether this employee is also a manager, 
 # according to the data provided in the dept_manager table, or a regular employee. 
 
-# 10. Extract a dataset containing the following information about the managers: employee number, first name, and last name. Add two columns at the end – one showing the difference between the maximum and minimum salary of that employee, and another one saying whether this salary raise was higher than $30,000 or NOT.
-# 11. Extract the employee number, first name, and last name of the first 100 employees, and add a fourth column, called “current_employee” saying “Is still employed” if the employee is still working in the company, or “Not an employee anymore” if they aren’t. Hint: You’ll need to use data from both the ‘employees’ and the ‘dept_emp’ table to solve this exercise. 
+select e.emp_no, first_name, last_name,
+case 
+	when e.emp_no in (select emp_no from t_dept_manager) then 'yes'
+    else 'no'
+    end as Manager
+from t_employees e
+
+where e.emp_no > 109990;
+
+# 10. Extract a dataset containing the following information about the managers: employee number, first name, and last name. 
+# Add two columns at the end – one showing the difference between the maximum and minimum salary of that employee, 
+# and another one saying whether this salary raise was higher than $30,000 or NOT.
+
+select m.emp_no, first_name, last_name, max(salary)-min(salary) as salary_dif,
+case 
+	when max(salary)-min(salary) > 30000 then 'yes'
+    else 'no'
+    end as raise_high
+from t_dept_manager m
+left join t_employees e
+on m.emp_no=e.emp_no
+join t_salaries s 
+on e.emp_no= s.emp_no
+group by m.emp_no, first_name, last_name;
+
+# 11. Extract the employee number, first name, and last name of the first 100 employees, and add a fourth column, called “current_employee” saying “Is still employed” if the employee is still working in the company, or “Not an employee anymore” if they aren’t. 
+#Hint: You’ll need to use data from both the ‘employees’ and the ‘dept_emp’ table to solve this exercise. 
+
+select emp_no, first_name, last_name,
+case
+ when emp_no in (select emp_no from t_dept_emp where to_date > current_date) 
+ then 'current employee'
+ else 'former employee'
+ end as employment_status
+ from t_employees
+ limit 100;
